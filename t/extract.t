@@ -57,7 +57,7 @@ sub test_dse {
     my $name           = shift || "Testing $required_class exception";
 
     unless ( eval "use $required_class; 1" ) {
-        SKIP {
+        SKIP: {
             skip "$required_class is not installed", 1;
         }
         return;

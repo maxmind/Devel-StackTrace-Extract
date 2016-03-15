@@ -22,6 +22,8 @@ matrix:
   include:
     - env: COVERAGE=1
       perl: '5.22'
+    - env: AUTHOR_TESTING=0
+      perl: '5.10'
 env:
   global:
     - RELEASE_TESTING=1

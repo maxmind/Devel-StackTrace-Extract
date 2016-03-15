@@ -1,4 +1,5 @@
-.build
 /Devel-StackTrace-Extract*
+.build
 local
+*.swp
 .tidyall.d

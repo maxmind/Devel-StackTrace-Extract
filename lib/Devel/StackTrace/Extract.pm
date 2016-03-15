@@ -123,7 +123,7 @@ subclasses the Throwable::Exception class.
 
 If we have a modern Mojo::Exception object with a C<frames> method, and it has
 its frames populated (i.e. someone used the C<trace> method, or called C<throw>)
-then we'll synthesize a Devel::StackTrace instance from that. 
+then we'll synthesize a Devel::StackTrace instance from that.
 
 =item If it has a C<trace> method call that
 

@@ -1,10 +1,5 @@
 #!/usr/bin/perl
 
-########################################################################
-# This test class is like this and not a TCM class because it's intended
-# to be extracted off into a CPAN distribution
-########################################################################
-
 use strict;
 use warnings;
 
@@ -45,6 +40,8 @@ test_dse( 'Mojo::Exception', <<'PERL');
 PERL
 
 exit;
+
+## no critic (ControlStructures::ProhibitUnreachableCode,BuiltinFunctions::ProhibitStringyEval)
 
 ########################################################################
 
@@ -95,7 +92,7 @@ PERL
         $lineno = __LINE__ + 1;
         $package_name->foo;
         1;
-    } && die "Failed to get exception!";
+    } && die 'Failed to get exception!';
 
     # note passing $@ into a function is a bad idea normally, but
     # I'm explicitly testing that this works here

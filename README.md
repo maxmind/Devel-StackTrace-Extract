@@ -31,7 +31,7 @@ order, as follows (these are subject to change without notice):
 
     If we have a modern Mojo::Exception object with a `frames` method, and it has
     its frames populated (i.e. someone used the `trace` method, or called `throw`)
-    then we'll synthesize a Devel::StackTrace instance from that. 
+    then we'll synthesize a Devel::StackTrace instance from that.
 
 - If it has a `trace` method call that
 

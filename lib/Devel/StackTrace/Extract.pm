@@ -116,29 +116,29 @@ order, as follows (these are subject to change without notice):
 
 =item If it has a method called C<stack_trace> use that
 
-This works with anything that uses the StackTrace::Auto Moose/Moo role, or
-subclasses the Throwable::Exception class.
+This works with anything that uses the L<StackTrace::Auto> Moose/Moo role, or
+subclasses the L<Throwable::Exception> class.
 
 =item If it is a Mojo::Exception, and has a method called C<frames> use that
 
-If we have a modern Mojo::Exception object with a C<frames> method, and it has
+If we have a modern L<Mojo::Exception> object with a C<frames> method, and it has
 its frames populated (i.e. someone used the C<trace> method, or called C<throw>)
-then we'll synthesize a Devel::StackTrace instance from that.
+then we'll synthesize a L<Devel::StackTrace> instance from that.
 
 =item If it has a C<trace> method call that
 
-This works for Exception::Class built exception objects, as well as any
-Moose::Exception instances.
+This works for L<Exception::Class> built exception objects, as well as any
+L<Moose::Exception> instances.
 
 =back
 
 =head1 BUGS
 
 The heuristics in this make no attempt to check whatever is returned by the
-exception classes are valid Devel::StackTrace objects
+exception classes are valid L<Devel::StackTrace> objects
 
-Mojo::Exception objects don't keep track of the arguments that are passed to a
-stack frame, so the Devel::StackTrace that this synthesizes acts as if every
+L<Mojo::Exception> objects don't keep track of the arguments that are passed to a
+stack frame, so the L<Devel::StackTrace> that this synthesizes acts as if every
 subroutine was called without arguments.
 
 =head1 SEE ALSO

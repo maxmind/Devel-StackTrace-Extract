@@ -86,11 +86,9 @@ sub _build_devel_trace_from_mojo_exception {
 
 1;
 
+# ABSTRACT: Extract a stack trace from an exception object
+
 __END__
-
-=head1 NAME
-
-Devel::StackTrace::Extract - extract a stack trace from an exception object
 
 =head1 DESCRIPTION
 

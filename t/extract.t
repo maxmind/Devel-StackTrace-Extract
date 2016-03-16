@@ -50,14 +50,16 @@ exit;
 my $count;
 
 sub test_dse {
+    ## no critic (Modules::RequireExplicitInclusion)
     local $Test::Builder::Level = $Test::Builder::Level + 1;
+    ## use critic
 
     my $required_class = shift;
     my $exception_src  = shift;
     my $name           = shift || "Testing $required_class exception";
 
     unless ( eval "use $required_class; 1" ) {
-        SKIP: {
+    SKIP: {
             skip "$required_class is not installed", 1;
         }
         return;

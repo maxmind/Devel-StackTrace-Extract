@@ -1,6 +1,10 @@
 # NAME
 
-Devel::StackTrace::Extract - extract a stack trace from an exception object
+Devel::StackTrace::Extract - Extract a stack trace from an exception object
+
+# VERSION
+
+version 1.000000
 
 # DESCRIPTION
 
@@ -24,27 +28,27 @@ order, as follows (these are subject to change without notice):
 
 - If it has a method called `stack_trace` use that
 
-    This works with anything that uses the StackTrace::Auto Moose/Moo role, or
-    subclasses the Throwable::Exception class.
+    This works with anything that uses the [StackTrace::Auto](https://metacpan.org/pod/StackTrace::Auto) Moose/Moo role, or
+    subclasses the [Throwable::Exception](https://metacpan.org/pod/Throwable::Exception) class.
 
 - If it is a Mojo::Exception, and has a method called `frames` use that
 
-    If we have a modern Mojo::Exception object with a `frames` method, and it has
+    If we have a modern [Mojo::Exception](https://metacpan.org/pod/Mojo::Exception) object with a `frames` method, and it has
     its frames populated (i.e. someone used the `trace` method, or called `throw`)
-    then we'll synthesize a Devel::StackTrace instance from that.
+    then we'll synthesize a [Devel::StackTrace](https://metacpan.org/pod/Devel::StackTrace) instance from that.
 
 - If it has a `trace` method call that
 
-    This works for Exception::Class built exception objects, as well as any
-    Moose::Exception instances.
+    This works for [Exception::Class](https://metacpan.org/pod/Exception::Class) built exception objects, as well as any
+    [Moose::Exception](https://metacpan.org/pod/Moose::Exception) instances.
 
 # BUGS
 
 The heuristics in this make no attempt to check whatever is returned by the
-exception classes are valid Devel::StackTrace objects
+exception classes are valid [Devel::StackTrace](https://metacpan.org/pod/Devel::StackTrace) objects
 
-Mojo::Exception objects don't keep track of the arguments that are passed to a
-stack frame, so the Devel::StackTrace that this synthesizes acts as if every
+[Mojo::Exception](https://metacpan.org/pod/Mojo::Exception) objects don't keep track of the arguments that are passed to a
+stack frame, so the [Devel::StackTrace](https://metacpan.org/pod/Devel::StackTrace) that this synthesizes acts as if every
 subroutine was called without arguments.
 
 # SEE ALSO
@@ -58,3 +62,20 @@ subroutine was called without arguments.
 [Moose::Exception](https://metacpan.org/pod/Moose::Exception)
 
 [Mojo::Exception](https://metacpan.org/pod/Mojo::Exception)
+
+# AUTHOR
+
+Mark Fowler <mfowler@maxmind.com>
+
+# CONTRIBUTORS
+
+- Dave Rolsky <drolsky@maxmind.com>
+- Mark Fowler <mark@twoshortplanks.com>
+- Olaf Alders <oalders@maxmind.com>
+
+# COPYRIGHT AND LICENSE
+
+This software is copyright (c) 2016 by MaxMind, Inc.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.

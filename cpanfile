@@ -25,12 +25,16 @@ on 'configure' => sub {
 
 on 'develop' => sub {
   requires "Code::TidyAll" => "0.24";
+  requires "Exception::Class" => "1.40";
   requires "File::Spec" => "0";
   requires "IO::Handle" => "0";
   requires "IPC::Open3" => "0";
+  requires "Mojolicious" => "6.55";
+  requires "Moose::Exception" => "2.1605";
   requires "Perl::Critic" => "1.123";
   requires "Perl::Tidy" => "20140711";
   requires "Pod::Coverage::TrustPod" => "0";
+  requires "StackTrace::Auto" => "0.200013";
   requires "Test::CPAN::Changes" => "0.19";
   requires "Test::Code::TidyAll" => "0.24";
   requires "Test::EOL" => "0";
@@ -41,4 +45,5 @@ on 'develop' => sub {
   requires "Test::Spelling" => "0.12";
   requires "Test::Synopsis" => "0";
   requires "Test::Version" => "1";
+  requires "Throwable::Error" => "0.200013";
 };

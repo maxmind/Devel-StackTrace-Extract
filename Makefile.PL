@@ -7,7 +7,7 @@ use 5.006;
 use ExtUtils::MakeMaker;
 
 my %WriteMakefileArgs = (
-  "ABSTRACT" => "extract a stack trace from an exception object",
+  "ABSTRACT" => "Extract a stack trace from an exception object",
   "AUTHOR" => "Mark Fowler <mfowler\@maxmind.com>",
   "CONFIGURE_REQUIRES" => {
     "ExtUtils::MakeMaker" => 0
